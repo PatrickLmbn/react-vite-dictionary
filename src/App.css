@@ -7,18 +7,40 @@
 }
 
 .nav-wrapper {
-  @apply w-full bg-[#021526] flex flex-row justify-around p-5;
+  @apply w-full bg-[#021526] p-5;
 }
 
-.inputField {
-  @apply w-64 p-3  rounded-sm;
+.nav-container {
+  @apply
+  md:max-w-screen-md md:flex md:justify-between 
+  lg:max-w-screen-lg m-auto lg:flex lg:flex-row lg:justify-between lg:items-center
+}
+
+.nav-content {
+  @apply 
+  lg:max-w-screen-lg lg:flex lg:gap-1
+}
+
+input{
+  @apply sm:max-w-screen-sm p-2 w-48 rounded-sm
+  md:max-w-screen-md md:w-64
+
 }
 
 button {
-  @apply text-white;
+  @apply
+  sm:max-w-screen-md px-4 py-2
+  md:max-w-screen-lg md:px-5 md:py-3
+  text-white rounded-sm  bg-[#03346E] hover:bg-[#1F316F] ease-in-out delay-100
+  
+  ;
 }
 .content-wrapper {
-  @apply sm:max-w-screen-lg flex flex-col m-auto;
+  @apply 
+  sm:max-w-screen-sm m-4
+  md:max-w-screen-lg
+  lg:max-w-screen-lg lg:w-full lg:m-auto lg:mt-10
+  ;
 }
 
 h2 {
@@ -32,3 +54,8 @@ h2 {
 .pos-container {
   @apply font-bold capitalize text-lg;
 }
+
+.word-volume{
+  @apply flex items-baseline justify-between
+} 
+

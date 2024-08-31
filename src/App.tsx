@@ -77,23 +77,33 @@ function App() {
     <>
       <div className="wrapper">
         <div className="nav-wrapper">
-          <input
-            type="text"
-            id="inputBox"
-            value={word}
-            placeholder="Enter a word"
-            onChange={handleChange}
-            className="inputField"
-          />{" "}
-          <button type="button" onClick={fetchMerriamData}>
-            Search
-          </button>
+          <div className="nav-container">
+            <div className="logo">
+              <h1 className="text-white flex flex-row text-2xl"><p>Dictio</p><p className="text-red-600">Knowledge</p></h1>
+            </div>
+              <div className="nav-content">
+              <input
+                type="text"
+                id="inputBox"
+                value={word}
+                placeholder="Enter a word"
+                onChange={handleChange}
+                className="inputField"
+              />{" "}
+              <button type="button" onClick={fetchMerriamData}>
+                Search
+              </button>
+              </div>
+          </div>
         </div>
-        <FontAwesomeIcon icon={faVolumeHigh} className="text-gray-700" />
+        
         <div className="content-wrapper">
-          <h2 className="word">{dispWord}</h2>
-          <p className="text-gray-400">{dispPronunciation}</p>
-          <div className="p-2">
+          <div className="word-volume">
+            <h2 className="text-[40px]">{dispWord}</h2>
+            <FontAwesomeIcon icon={faVolumeHigh} className="text-gray-700 " />
+          </div>
+          <p className="text-gray-400 mt-2">{dispPronunciation}</p>
+          <div className="mt-5">
             <pre>{dispDefinition}</pre>
           </div>
         </div>
